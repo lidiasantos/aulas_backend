@@ -9,30 +9,36 @@
     }
 </style>
 
-<h2>Estrutura de repetição</h2>
+<h2>Estrutura de While</h2>
 <p>
     Utilizada para repetir uma sequência de 
-    instrução por um número predeterminado 
-    de vezes.
+    instrução, enquanto uma repetição
+     for verdadeira.
 </p>
 
 <p>
     <pre>
-        for(inicio; condição;passo){
+        while(condição){
             //instruçãpo a serem repetidas
         }
     </pre>
 </p>
 <div class="container">
 <?php 
-for ($tabuada = 1; $tabuada <=10; $tabuada ++){
-    echo "<div>";
-    for($contador = 0; $contador <= 10; $contador++){
-        $resultado =  $tabuada * $contador;
-        echo "$tabuada x $contador = " . $contador * $tabuada . "<br>";
+
+    $tabuada = 1;
+    while($tabuada <= 10){
+        echo "<div>";
+    
+    $contador =0;
+    while($contador<=10){
+        $resultado = $tabuada * $contador;
+        echo "$tabuada x $contador = $resultado <br>";
+        $contador++;
     }
     
     echo"</div>";
-}
+    $tabuada++;
+    }
     ?>
     </div>
