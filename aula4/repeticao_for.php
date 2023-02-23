@@ -12,9 +12,13 @@
         }
     </pre>
 </p>
-
+<div class="container">
 <?php 
+for ($tabuada = 1; $tabuada <=10; $tabuada ++){
     for($contador = 0; $contador <= 10; $contador++){
-        echo "2 x $contador = " . $contador * 2 . "<br>";
+        $resultado =  $tabuada * $contador;
+        echo "$tabuada x $contador = " . $contador * $tabuada . "<br>";
+    }
     }
     ?>
+    </div>
