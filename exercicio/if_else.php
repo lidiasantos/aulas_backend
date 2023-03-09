@@ -1,7 +1,10 @@
-<h2> Exercicio1</h2>
-<p> Crie um algoritmo em PHP que recebe como entrada três notas. O algoritmo deve calcular a média aritimética 
-    final do aluno e imprimir sua situação final. Se a média for maior ou igual 6 pontos imprimir aprovado, 
-    senão se a média for maior que 3 pontos e menor que 6 pontos imprimir em recuperação, senão se a média for menor que 3 pontos imprimir reprovado.
+<h2> Exercicio</h2>
+<p> Crie um algoritmo em PHP que recebe como entrada três notas.
+     O algoritmo deve calcular a média aritimética 
+    final do aluno e imprimir sua situação final. 
+    Se a média for maior ou igual 6 pontos imprimir aprovado, 
+    senão se a média for maior que 3 pontos e menor que 6 pontos imprimir
+     em recuperação, senão se a média for menor que 3 pontos imprimir reprovado.
 </p>
 
 
