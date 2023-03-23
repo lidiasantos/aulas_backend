@@ -27,7 +27,13 @@ if (x % 2 == 0){
 for (i; i <=5; i++){
     console.log(i);
 }
-}          
+} 
+function exwhile (){
+    var i =0;
+    while(i <= 10){
+        console.log("i = " +1);
+    }
+}     
 var i= 0;
 while (i <=10){
     console.log("i = " +i);
