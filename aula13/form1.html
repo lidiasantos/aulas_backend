@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Mudar cor de fundo </title>
-<?php
-$a=@$_POST['cor'];
-$b="#66CDAA"; // cor inicial
-?>
-    <style>
-        body {
-            background: <?php switch($a) {case "": echo $b; break; default: echo $a;break; } ?>;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <form method="post">
-        <input type="color" name="cor">
-        <input type="submit" value="Mudar Cor">
+    <form methed="GET" action="exercicio.php">
+        <label> digite o numero 1 </label>
+        <input type="text" name="numero">
+        <label> digite o numero 2 </label>
+        <input type="number" name="n2">
+        <button type="submit">Gerar</button>
+        
     </form>
 </body>
 </html>
