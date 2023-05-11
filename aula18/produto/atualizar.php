@@ -1,22 +1,22 @@
-<?php
+  <?php
 require_once "../conexao.php";
 
 if(isset ($_POST["nome"]) && isset($_POST["descricao"]) && isset($_POST["preco"]))
 {
-
+$id = $_POST ["id"];
 $nome = $_POST ["nome"];
 $descricao =$_POST ["descricao"];
 $preco =$_POST ["preco"];
 $foto = "semfoto.png";
 
 
-$sql = "INSERT INTO `produto` (`nome`, `descricao`, `preco`, `foto`)
- VALUES (?, ?, ?, ?);";
+$sql = "UPDATE produto SET
+ `nome`=?, `descricao`=?, `preco`=?, `foto`=? WHERE  `idproduto`=?";
 echo $sql;
 
 $comando = $conexao->prepare($sql);
 
-$comando->bind_param("ssds", $nome,$descricao, $preco,$foto );
+$comando->bind_param("ssdsi", $nome,$descricao, $preco,$foto, $id);
 
 $comando->execute();
 }
