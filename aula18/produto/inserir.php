@@ -21,4 +21,4 @@ $comando->bind_param("ssds", $nome,$descricao, $preco,$foto );
 $comando->execute();
 }
 //abre o arquivo fotm.php
-header("Location: form.php");
+header("Location: produtos.php");

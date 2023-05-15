@@ -7,7 +7,7 @@ if(isset($_GET['id']))
 $id = $_GET['id'];
 
 
-$sql = "DELETE FROM `produto` WHERE  `idproduto`=$id;";
+$sql = "DELETE FROM `produto` WHERE  `idproduto`=?;";
 
 
 $comando = $conexao->prepare($sql);
@@ -19,4 +19,4 @@ $comando->execute();
 
 }
 //abre o arquivo fotm.php
-header("Location: form.php");
+header("Location: produtos.php");
