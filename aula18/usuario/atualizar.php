@@ -24,4 +24,4 @@ $comando->bind_param("ssssi", $nome,$login, $senha,$foto, $id);
 $comando->execute();
 }
 //abre o arquivo fotm.php
-header("Location: usuario.php");
+header("Location: index.php");

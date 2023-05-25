@@ -23,4 +23,4 @@ $comando->bind_param("ssdsi", $nome,$descricao, $preco,$foto, $id);
 $comando->execute();
 }
 //abre o arquivo fotm.php
-header("Location: produtos.php");
+header("Location: index.php");
