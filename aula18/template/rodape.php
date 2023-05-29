@@ -12,7 +12,14 @@
     <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
   
     <script>
-    let table = new DataTable('#myTable');
+      //let table = new DataTable('#myTable');
+  $(document).ready(function() {
+    $('#myTable').DataTable( {
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.13.4/i18n/pt-BR.json"
+        }
+    } );
+} ); 
   </script>
  
 </body>
