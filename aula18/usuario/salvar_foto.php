@@ -7,5 +7,6 @@ $para_onde_vai = "../uploads/$nome_arquivo";
 
 move_uploaded_file($onde_esta, $para_onde_vai);
 }else{
-    $nome_arquivo= "image.jpg"
+    $nome_arquivo= "image.jpg";
 }
+?>

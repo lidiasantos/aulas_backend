@@ -1,4 +1,5 @@
-  <?php
+<?php require_once "../controla_sessao/controla.php"; ?>
+ <?php
 require_once "../conexao.php";
 
 if(isset ($_POST["nome"]) && isset($_POST["login"]) && isset($_POST["senha"]))

@@ -2,9 +2,12 @@
 require_once "../conexao.php";
 
 
-$sql = "SELECT * FROM `produto` ";
+$sql = "SELECT * FROM `produto` where categoria like %?% ";
 
 $comando = $conexao->prepare($sql);
+
+$categoria = $_GET['categoria'] ??"";
+$comando->bind_param("s", $categoria);
 
 $comando->execute();
 
