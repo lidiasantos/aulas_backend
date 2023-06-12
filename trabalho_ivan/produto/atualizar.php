@@ -1,0 +1,26 @@
+<?php 
+
+if(isset ($_POST["codigo"]) && isset($_POST["titulo"]) && isset($_POST["sinopse"]) && isset($_POST["anolancamento"]) && isset($_POST["diretor"])  )
+
+
+
+
+$codigo = $_POST ["codigo"];
+$titulo =$_POST ["titulo"];
+$sinopse =$_POST ["sinopse"];
+$anolancameto =$_POST ["anolancamento"];
+$diretor =$_POST ["diretor"];
+
+
+$sql = "UPDATE filmes SET
+ `codigo`=?, `titulo`=?, `sinopse`=?, `ano_lancamento`=?, `diretor`=?  WHERE  `codigo`=?;
+echo $sql;
+
+$comando = $conexao->prepare($sql);
+
+$comando->bind_param("ssss", $codigo, $titulo, $sinopse,$anolancameto, $diretor);
+
+$comando->execute();
+}
+//abre o arquivo fotm.php
+header("Location: index.php");
