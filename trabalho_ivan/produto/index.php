@@ -34,11 +34,13 @@
       <td><?php echo $filme ['ano_lancamento'];?></td>
       <td><?php echo $filme ['diretor'];?></td>
       <td>
-        <a href="excluir.php?id=<?php echo $filme ['codigo']; ?>" class="btn btn-danger"><i class="fa-solid fa-pen-to-square"></i>Excluir</a>
-        <a href="form.php?id=<?php echo $filme ['codigo']; ?>"  class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Atualizar</a>
+        <a href="excluir.php?codigo=<?php echo $filme ['codigo']; ?>" class="btn btn-danger"><i class="fa-solid fa-pen-to-square"></i>Excluir</a>
+        <a href="form.php?codigo=<?php echo $filme ['codigo']; ?>"  class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Atualizar</a>
       </td>
     </tr>
-    <?php }?>
+    <?php 
+  
+  }?>
   </tbody>
 </table>
  </div>

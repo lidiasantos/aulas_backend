@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Filmes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   </head>
   <body>
@@ -13,13 +13,13 @@
   <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../imagens/filmes1.jpg" class="d-block w-100" alt="...">
+      <img src="../imagens/filme1.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="../imagens/filmes2.jpg" class="d-block w-100" alt="...">
+      <img src="../imagens/filme2.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="../imagens/filmes3.jpg" class="d-block w-100" alt="...">
+      <img src="../imagens/filme3.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

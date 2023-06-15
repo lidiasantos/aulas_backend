@@ -12,7 +12,7 @@ $comando->execute();
 $resultado = $comando->get_result();
 
 //cria um vetor vazio
-$filme = [];
+$filmes = [];
 
 //pegar a primeira linha de resultado
 while($filme = $resultado->fetch_assoc()){

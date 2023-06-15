@@ -1,26 +1,33 @@
+
 <?php
 
-if(isset ($_POST["codigo"]) && isset($_POST["titulo"]) && isset($_POST["sinopse"]) && isset($_POST["anolancamento"]) && isset($_POST["diretor"])  )
+require_once "../conexao.php";
+
+if(isset($_POST["titulo"])  && isset($_POST["sinopse"]) 
+&& isset($_POST["ano_lancamento"]) && isset($_POST["diretor"]))
 {
 
 
 
-$codigo = $_POST ["codigo"];
-$titulo =$_POST ["titulo"];
-$sinopse =$_POST ["sinopse"];
-$anolancameto =$_POST ["anolancamento"];
-$diretor =$_POST ["diretor"];
+$titulo = $_POST["titulo"];
+$sinopse = $_POST["sinopse"];
+$ano_lancamento = $_POST["ano_lancamento"];
+$diretor = $_POST["diretor"];
 
 
-$sql = "INSERT INTO `produto` (`codigo`, `titulo`, `sinopse`, `sinopse`, `anolancamento`, `diretor`)
- VALUES (?, ?, ?, ?, ?, ?);";
-echo $sql;
+//String com o comando SQL para ser executado no DB
+$sql = "INSERT INTO `filmes`(`titulo`, `sinopse`, `ano_lancamento`, `diretor`) 
+        VALUES (?, ?, ?, ?);";
 
+//Prepara o SQL para ser executado no banco de dados
 $comando = $conexao->prepare($sql);
 
-$comando->bind_param("sssss", $codigo ,$titulo, $sinopse, $anolancameto, $diretor );
+//adiciona os valores nos parâmetros
+$comando->bind_param("ssss", $titulo, $sinopse, $ano_lancamento, $diretor);
 
+//executa o SQL - Comando no Banco de Dados
 $comando->execute();
+
 }
-//abre o arquivo fotm.php
+//abre o arquivo form.php
 header("Location: index.php");

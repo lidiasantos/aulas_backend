@@ -1,26 +1,23 @@
-<?php 
+<?php
 
-if(isset ($_POST["codigo"]) && isset($_POST["titulo"]) && isset($_POST["sinopse"]) && isset($_POST["anolancamento"]) && isset($_POST["diretor"])  )
+require_once "../conexao.php";
 
+ $titulo = $_POST["titulo"];
+ $sinopse = $_POST["sinopse"];
+ $ano_lancamento = $_POST["ano_lancamento"];
+ $diretor = $_POST["diretor"];
+ $codigo = $_POST ["codigo"];
+ 
+ //string com o comendo sql para ser executoado no db
+ $sql = "UPDATE filmes SET `titulo`=?, `sinopse`=?, `ano_lancamento`=?, `diretor`=? WHERE  `codigo`=?;";
+ //prepara o slq para ser executado no banco de dados
+ $comando=$conexao->prepare($sql);
+ //adiciona os valores nos parametros
 
+$comando->bind_param("ssssi", $titulo, $sinopse, $ano_lancamento, $diretor, $codigo);
 
-
-$codigo = $_POST ["codigo"];
-$titulo =$_POST ["titulo"];
-$sinopse =$_POST ["sinopse"];
-$anolancameto =$_POST ["anolancamento"];
-$diretor =$_POST ["diretor"];
-
-
-$sql = "UPDATE filmes SET
- `codigo`=?, `titulo`=?, `sinopse`=?, `ano_lancamento`=?, `diretor`=?  WHERE  `codigo`=?;
-echo $sql;
-
-$comando = $conexao->prepare($sql);
-
-$comando->bind_param("ssss", $codigo, $titulo, $sinopse,$anolancameto, $diretor);
-
+//executa o SQL - Comando no Banco de Dados
 $comando->execute();
-}
-//abre o arquivo fotm.php
+
+//abre o arquivo form.php
 header("Location: index.php");
