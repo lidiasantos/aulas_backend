@@ -9,12 +9,12 @@
     >
     
     <label for="titulo">Título</label><br>
-    <input type="text" name="titulo" id="titulo"> <?php echo $filme ['titulo'] ?? ""; ?><br><br>
+    <input type="text" name="titulo" id="titulo" value=" <?php echo $filme ['titulo'] ?? ""; ?>"><br><br>
 
     <input type="hidden" name="codigo" id="codigo" value="<?php echo $filme ['codigo'] ?? ""; ?>"><br>
 
     <label for="sinopse">Sinopse</label><br>
-    <textarea type="text" name="sinopse" id="sinopse" value="<?php echo $filme ['sinopse'] ?? ""; ?>"></textarea> <br><br>
+    <textarea type="text" name="sinopse" id="sinopse"> <?php echo $filme ['sinopse'] ?? ""; ?></textarea> <br><br>
 
     <label for="ano_lancamento">Ano Lançamento</label><br>
     <input type="text" name="ano_lancamento" id="ano_lancamento" value="<?php echo $filme ['ano_lancamento'] ?? ""; ?>"> <br>
